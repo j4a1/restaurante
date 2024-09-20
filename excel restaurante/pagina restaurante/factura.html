@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0d1d1f;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #464545;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #78b9b2;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .detail {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #7e887e;
+            box-shadow: 0 4px 8px blanchedalmond;
+        }
+
+        .detail label {
+            font-weight: bold;
+            color: #81dacb;
+        }
+
+        .detail:last-child {
+            margin-bottom: 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #004d40;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .detail {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <a href="index.html" class="back-button">Regresar</a>
+        </div>
+        <h1>Factura</h1>
+        
+        <div id="facturaDetails">
+            <!-- Los detalles de la factura se cargarán aquí -->
+        </div>
+    </div>
+
+    <script>
+        async function fetchFactura() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const numeroOrden = urlParams.get('numero_orden');
+
+            if (!numeroOrden) {
+                document.getElementById('facturaDetails').innerText = 'Número de orden no proporcionado';
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://localhost:3000/factura?numero_orden=${numeroOrden}`);
+                const result = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('facturaDetails').innerHTML = `
+                        <div class="detail"><label>Número de Orden:</label> ${result.numero_orden}</div>
+                        <div class="detail"><label>Fecha de la Orden:</label> ${result.fecha_orden}</div>
+                        <div class="detail"><label>Propina:</label> ${result.propina_orden}</div>
+                        <div class="detail"><label>Hora de Cobro:</label> ${result.hora_de_cobro_orden}</div>
+                        <div class="detail"><label>Mesero que Atendió:</label> ${result.atendio_orden}</div>
+                    `;
+                } else {
+                    document.getElementById('facturaDetails').innerText = `Error: ${result.error}`;
+                }
+            } catch (error) {
+                document.getElementById('facturaDetails').innerText = 'Error al obtener los detalles de la factura';
+                console.error('Error:', error);
+            }
+        }
+
+        fetchFactura();
+    </script>
+</body>
+</html>

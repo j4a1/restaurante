@@ -1,0 +1,70 @@
+ id_producto;nombre_producto;costo_producto;precio_producto;id_categorias1
+1;Arrachera del Chef;95,85;135;1
+2;Atun Encostrado;145,96;178;2
+3;Brochetas Hawaiianas;56,98;74;3
+4;Café americano;12,6;18;4
+5;Camarones al Coco;68,88;84;5
+6;Camarones Momia;58,5;75;6
+7;Capuccino;21,6;30;7
+8;Cítricos;56,58;69;8
+9;Corona;24,9;30;9
+10;Del Cheff;112,05;135;10
+11;Del Huerto;54,6;65;11
+12;Ensalada Prímula;68;80;12
+13;Esfera del Cheff;39;50;13
+14;Espárragos Envueltos;63,18;78;14
+15;Espresso;14,6;20;15
+16;Frutos del Bosque;69,72;83;16
+17;Indio;21,25;25;17
+18;Italiana;88,56;123;18
+19;Lasagna Ratatouille;54,75;75;19
+20;Limonada;20;25;20
+21;Margarita;73,5;105;21
+22;Margret de Pato;150,48;198;22
+23;Mejillones Horneados;56,25;75;23
+24;Mexicana;95,45;115;24
+25;Minerva;32,4;40;25
+26;Modelo;23,7;30;26
+27;Naranjada;18,25;25;27
+28;Pacifico;21,9;30;28
+29;Pan de Elote;29,6;40;29
+30;Panela a la Leña;21,9;30;30
+31;Pannacotta Vainilla y Café;32,4;40;31
+32;Pasta 4 Quesos;69;53,13;32
+33;Pasta Alfredo;67;55,61;33
+34;Pasta de Tomate Deshidratado;65;54,6;34
+35;Pay de Temporada;33,6;42;35
+36;Pera Rostizada;75,65;89;36
+37;Pesto & Camarón;105;125;37
+38;Pizza Prímula;81,9;105;38
+39;Pollo al Pastor;94,3;115;39
+40;Pollo Silvestre;90;125;40
+41;Portobello Confitado;53,76;64;41
+42;Prímula Espresso;17,75;25;42
+43;Quesadillas Gobernador;60,06;78;43
+44;Refresco;16;20;44
+45;Rollos Prímula;52,56;73;45
+46;Salmón;63;84;46
+47;Salmón Ahumado;105,3;135;47
+48;Salmón al Pesto;121,8;174;48
+49;Strudel de Manzana;31,5;45;49
+50;Tacos Arrachera;66,36;79;50
+51;Tacos Capeados;60,75;75;51
+52;Tártara de atún/salmón Frescto;63,2;79;52
+53;Te helado;18,5;25;53
+54;Tecate;18;25;54
+55;Tiramisú;31,5;42;55
+56;Tisana;18;25;56
+57;Tropical;91,25;125;57
+58;Vacío;132,84;164;58
+59;Victoria;21,3;30;59
+60;Vino 1;422,64;587;60
+6;vino2;397,85;545;6
+62;Vino 3;415,4;670;62
+63;Vino 4;270,6;410;63
+64;Vino 5;553,34;758;64
+65;Vino 6;536,25;715;65
+66;Vino 7;501,16;748;66
+67;Vino 8;256,61;383;67
+68;Vino 9;478,78;647;68
+69;vino 10;431,88;708;69
